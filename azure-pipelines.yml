@@ -40,7 +40,7 @@ steps:
 
 - task: SSH@0
   inputs:
-    sshEndpoint: 'azurevm2'
+    sshEndpoint: 'azurevm'
     runOptions: 'commands'
     commands: 'ls -alt'
 
