@@ -38,9 +38,8 @@ steps:
   workingDirectory: '$(modulePath)'
   displayName: 'Get dependencies, then build'
 
-- task: CopyFilesOverSSH@0
+- task: SSH@0
   inputs:
-    sshEndpoint: 'azurevm'
-    sourceFolder: '$(Agent.BuildDirectory)'
-    contents: '**'
-    targetFolder: '/tmp'
+    sshEndpoint: 'azurevm2'
+    runOptions: 'commands'
+    commands: 'ls -alt'
