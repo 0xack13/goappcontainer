@@ -40,11 +40,7 @@ steps:
 
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 52.233.41.42
-    #sourceFolder: # Optional
-    contents: '**' 
-    targetFolder: /tmp # Optional
-    cleanTargetFolder: false # Optional
-    overwrite: true # Optional
-    #failOnEmptySource: false # Optional
-    #flattenFolders: false # Optional
+    sshEndpoint: 'azurevm'
+    sourceFolder: '.'
+    contents: '**'
+    targetFolder: '/tmp'
