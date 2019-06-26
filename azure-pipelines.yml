@@ -41,6 +41,6 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'azurevm'
-    sourceFolder: '.'
+    sourceFolder: '$(Agent.BuildDirectory)'
     contents: '**'
     targetFolder: '/tmp'
