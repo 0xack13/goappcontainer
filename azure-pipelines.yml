@@ -46,7 +46,7 @@ steps:
 
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'azurevm2'
+    sshEndpoint: 'azurevm'
     sourceFolder: '$(Agent.BuildDirectory)'
     contents: '**'
     targetFolder: '/home/azure'
